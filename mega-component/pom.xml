@@ -33,6 +33,7 @@
         <module>mega-component-json-starter</module>
         <module>mega-component-nuc</module>
         <module>mega-component-bioflow</module>
+        <module>mega-component-commons</module>
     </modules>
 
     <properties>
