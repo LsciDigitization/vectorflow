@@ -25,6 +25,8 @@
         <module>mega-component-workflow</module>
         <module>mega-component-workflow-starter</module>
         <module>mega-component-task</module>
+        <module>mega-component-threadpool</module>
+        <module>mega-component-threadpool-starter</module>
     </modules>
 
     <properties>
