@@ -32,6 +32,21 @@
                 <artifactId>mega-component-openfeign-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-swagger-compatible</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-swagger-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

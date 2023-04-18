@@ -19,6 +19,9 @@
         <module>mega-component-api-response</module>
         <module>mega-component-openfeign</module>
         <module>mega-component-openfeign-starter</module>
+        <module>mega-component-swagger</module>
+        <module>mega-component-swagger-compatible</module>
+        <module>mega-component-swagger-starter</module>
     </modules>
 
     <properties>
