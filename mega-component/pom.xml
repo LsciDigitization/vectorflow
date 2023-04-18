@@ -22,6 +22,8 @@
         <module>mega-component-swagger</module>
         <module>mega-component-swagger-compatible</module>
         <module>mega-component-swagger-starter</module>
+        <module>mega-component-workflow</module>
+        <module>mega-component-workflow-starter</module>
     </modules>
 
     <properties>

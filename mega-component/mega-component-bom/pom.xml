@@ -47,6 +47,16 @@
                 <artifactId>mega-component-swagger-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-workflow</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-workflow-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
