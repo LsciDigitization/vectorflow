@@ -27,6 +27,8 @@
         <module>mega-component-task</module>
         <module>mega-component-threadpool</module>
         <module>mega-component-threadpool-starter</module>
+        <module>mega-component-mybatis</module>
+        <module>mega-component-mybatis-starter</module>
     </modules>
 
     <properties>

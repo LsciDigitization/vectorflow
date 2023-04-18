@@ -72,6 +72,16 @@
                 <artifactId>mega-component-threadpool-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-mybatis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-mybatis-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
