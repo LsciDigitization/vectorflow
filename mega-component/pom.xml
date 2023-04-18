@@ -29,6 +29,8 @@
         <module>mega-component-threadpool-starter</module>
         <module>mega-component-mybatis</module>
         <module>mega-component-mybatis-starter</module>
+        <module>mega-component-json</module>
+        <module>mega-component-json-starter</module>
     </modules>
 
     <properties>
