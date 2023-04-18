@@ -15,8 +15,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>mega-component-api-response</module>
         <module>mega-component-bom</module>
+        <module>mega-component-api-response</module>
+        <module>mega-component-openfeign</module>
+        <module>mega-component-openfeign-starter</module>
     </modules>
 
     <properties>

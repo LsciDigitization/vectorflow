@@ -22,6 +22,16 @@
                 <artifactId>mega-component-api-response</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-openfeign</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-openfeign-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
