@@ -24,6 +24,7 @@
         <module>mega-component-swagger-starter</module>
         <module>mega-component-workflow</module>
         <module>mega-component-workflow-starter</module>
+        <module>mega-component-task</module>
     </modules>
 
     <properties>
