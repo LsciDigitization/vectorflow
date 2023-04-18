@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.mega.component.threadpool.config.ThreadPoolAutoConfiguration
