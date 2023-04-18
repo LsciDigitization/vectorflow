@@ -31,6 +31,8 @@
         <module>mega-component-mybatis-starter</module>
         <module>mega-component-json</module>
         <module>mega-component-json-starter</module>
+        <module>mega-component-nuc</module>
+        <module>mega-component-bioflow</module>
     </modules>
 
     <properties>
