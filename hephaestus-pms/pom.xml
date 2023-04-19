@@ -13,9 +13,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>hephaestus-pms-bom</module>
         <module>hephaestus-pms-nuc</module>
         <module>hephaestus-pms-nuc-starter</module>
-        <module>hephaestus-pms-bom</module>
+        <module>hephaestus-pms-data</module>
+        <module>hephaestus-pms-data-runtime</module>
     </modules>
 
     <properties>

@@ -102,6 +102,11 @@
                 <artifactId>mega-component-bioflow</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.component</groupId>
+                <artifactId>mega-component-commons</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

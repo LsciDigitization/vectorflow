@@ -25,6 +25,16 @@
                 <artifactId>hephaestus-pms-nuc-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-data-runtime</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
