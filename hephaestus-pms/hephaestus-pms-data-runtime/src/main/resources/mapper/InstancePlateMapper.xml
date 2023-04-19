@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.runtime.mapper.InstancePlateMapper">
+
+
+    <select id="countGroupByPlateNo" resultType="com.mega.hephaestus.pms.data.model.view.PlateNoCountView">
+		SELECT count(*) count,plate_no  FROM hephaestus_instance_plate
+
+		group by plate_no
+
+    </select>
+
+    <select id="countByIsFinishedGroupByPlateNo" resultType="com.mega.hephaestus.pms.data.model.view.PlateNoCountView">
+        SELECT count(*) count,plate_no  FROM hephaestus_instance_plate
+        where is_finished =1
+        group by plate_no
+    </select>
+</mapper>

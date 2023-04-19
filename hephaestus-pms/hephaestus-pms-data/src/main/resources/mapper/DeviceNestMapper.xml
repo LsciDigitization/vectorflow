@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.mysql.mapper.DeviceNestMapper">
+
+
+    <select id="getNestWithPlate" resultType="com.mega.hephaestus.pms.data.mysql.view.NestPlateView">
+		SELECT
+		t1.*,
+		t2.id plate_id,
+		t2.plate_type plate_type,
+		t2.bar_code bar_code
+		FROM
+		hephaestus_device_nest t1
+		LEFT JOIN hephaestus_labware_plate t2 ON t1.id = t2.labware_nest_id
+		<where>
+			and t1.is_deleted = 0
+
+			<if test="ids != null and ids.size() >0">
+				and t1.device_nest_group_id in
+				<foreach collection="ids"  item="id" open="(" close=")" separator=",">
+					#{id}
+				</foreach>
+			</if>
+
+
+        </where>
+    </select>
+
+
+</mapper>

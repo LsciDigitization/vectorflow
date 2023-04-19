@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.mysql.mapper.LabwareTransferPlanMapper">
+
+
+    <select id="listTransferPlanJoinPlateJoinLiquid" resultType="com.mega.hephaestus.pms.data.mysql.view.LabwareTransferPlanView">
+        SELECT
+        t1.id id,
+        t1.project_id project_id,
+        t1.NAME NAME,
+        t1.description description,
+        t1.source_plate_type source_plate_type,
+        t1.destination_plate_type destination_plate_type,
+        t1.step_key step_key,
+        t1.sort_order sort_order,
+        t1.sample_transfer_method sample_transfer_method,
+        t1.transfer_type transfer_type,
+        t1.pipette_id pipette_id,
+        t1.pipette_count pipette_count,
+        t1.liquid_id liquid_id,
+        t1.volume volume,
+        t1.well_range well_range,
+        t2.NAME liquid_name
+        FROM
+        hephaestus_labware_transfer_plan t1
+        LEFT JOIN hephaestus_labware_liquid t2 ON t1.liquid_id = t2.id
+        <where>
+            <if test="projectId != null">
+                and t1.project_id = #{projectId}
+            </if>
+        </where>
+
+    </select>
+
+
+</mapper>

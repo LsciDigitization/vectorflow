@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.mysql.mapper.LabwareTransferMapper">
+
+
+    <select id="listTransferJoinPlateJoinWellJoinLiquid" resultType="com.mega.hephaestus.pms.data.mysql.view.LabwareTransferView">
+        SELECT
+        t1.id id,
+        t1.project_id project_id,
+        t1.plan_id plan_id,
+        t1.source_plate source_plate,
+        t1.source_well source_well,
+        t1.destination_plate destination_plate,
+        t1.destination_well destination_well,
+        t1.liquid_id liquid_id,
+        t1.source_sample_id source_sample_id,
+        t1.transfer_type transfer_type,
+        t1.volume volume,
+        t1.pipette_id pipette_id,
+        t1.transfer_time transfer_time,
+        t2.plate_type source_plate_key,
+        t3.well_key source_well_key,
+        t4.plate_type destination_plate_key,
+        t5.well_key destination_well_key,
+        t6.name liquid_name
+        FROM
+        hephaestus_labware_transfer t1
+        LEFT JOIN hephaestus_labware_plate t2 ON t1.source_plate = t2.id
+        LEFT JOIN hephaestus_labware_well t3 ON t1.source_well = t3.id
+        LEFT JOIN hephaestus_labware_plate t4 ON t1.destination_plate = t4.id
+        LEFT JOIN hephaestus_labware_well t5 ON t1.destination_well = t5.id
+        left join hephaestus_labware_liquid t6 on t1.liquid_id = t6.id
+        <where>
+
+            <if test="sampleId != null and sampleId>0">
+                or  t1.source_sample_id = #{sampleId}  or t1.destination_sample_id = #{sampleId}
+
+            </if>
+            <if test="liquidId != null and liquidId>0">
+                or t1.liquid_id = #{liquidId}
+            </if>
+        </where>
+
+        order by t1.transfer_time desc
+    </select>
+
+    <select id="listBySampleIdAndWellId" resultType="com.mega.hephaestus.pms.data.mysql.entity.LabwareTransferEntity">
+
+        select * from hephaestus_labware_transfer
+        <where>
+            <if test="processRecordId != null">
+                and (process_record_id = #{processRecordId} )
+            </if>
+            <if test="sampleId != null and sampleId>0">
+            and   (   source_sample_id = #{sampleId}  or destination_sample_id = #{sampleId}
+
+            </if>
+            <if test="wellId != null">
+                or destination_well = #{wellId} )
+            </if>
+
+
+        </where>
+     </select>
+
+</mapper>

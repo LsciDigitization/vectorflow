@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mega.hephaestus.pms.data.model.mapper">
+    <resultMap type="com.mega.hephaestus.pms.data.runtime.entity.ResourceTaskEntity" id="HephaestusDeviceTaskMap">
+                    <result property="id" column="id" jdbcType="BIGINT"/>
+                    <result property="deviceType" column="device_type" jdbcType="VARCHAR"/>
+                    <result property="deviceKey" column="device_key" jdbcType="VARCHAR"/>
+                    <result property="deviceKeyRange" column="device_key_range" jdbcType="VARCHAR"/>
+                    <result property="deviceKeyPriority" column="device_key_priority" jdbcType="INTEGER"/>
+                    <result property="deviceId" column="device_id" jdbcType="VARCHAR"/>
+                    <result property="taskStatus" column="task_status" jdbcType="VARCHAR"/>
+                    <result property="taskCommand" column="task_command" jdbcType="VARCHAR"/>
+                    <result property="taskParameter" column="task_parameter" jdbcType="VARCHAR"/>
+                    <result property="instanceId" column="instance_id" jdbcType="BIGINT"/>
+                    <result property="taskId" column="task_id" jdbcType="BIGINT"/>
+                    <result property="taskRequestId" column="task_request_id" jdbcType="VARCHAR"/>
+                    <result property="taskErrorMessage" column="task_error_message" jdbcType="VARCHAR"/>
+                    <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+                    <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+                    <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+                    <result property="upateTime" column="upate_time" jdbcType="TIMESTAMP"/>
+            </resultMap>
+    <!--通过实体作为筛选条件查询-->
+    <sql id="where">
+        <where>
+                                                <if test="id != null">
+                        and id = #{id}
+                    </if>
+                                                                <if test="deviceType != null and deviceType !=''">
+                        and device_type = #{deviceType}
+                    </if>
+                                                                <if test="deviceKey != null and deviceKey !=''">
+                        and device_key = #{deviceKey}
+                    </if>
+                                                                <if test="deviceKeyRange != null and deviceKeyRange !=''">
+                        and device_key_range = #{deviceKeyRange}
+                    </if>
+                                                                <if test="deviceKeyPriority != null">
+                        and device_key_priority = #{deviceKeyPriority}
+                    </if>
+                                                                <if test="deviceId != null and deviceId !=''">
+                        and device_id = #{deviceId}
+                    </if>
+                                                                <if test="taskStatus != null and taskStatus !=''">
+                        and task_status = #{taskStatus}
+                    </if>
+                                                                <if test="taskCommand != null and taskCommand !=''">
+                        and task_command = #{taskCommand}
+                    </if>
+                                                                <if test="taskParameter != null">
+                        and task_parameter = #{taskParameter}
+                    </if>
+                                                                <if test="instanceId != null">
+                        and instance_id = #{instanceId}
+                    </if>
+                                                                <if test="taskId != null">
+                        and task_id = #{taskId}
+                    </if>
+                                                                <if test="taskRequestId != null and taskRequestId !=''">
+                        and task_request_id = #{taskRequestId}
+                    </if>
+                                                                <if test="taskErrorMessage != null and taskErrorMessage !=''">
+                        and task_error_message = #{taskErrorMessage}
+                    </if>
+                                                                <if test="createTime != null">
+                        and create_time = #{createTime}
+                    </if>
+                                                                <if test="startTime != null">
+                        and start_time = #{startTime}
+                    </if>
+                                                                <if test="endTime != null">
+                        and end_time = #{endTime}
+                    </if>
+                                                                <if test="upateTime != null">
+                        and upate_time = #{upateTime}
+                    </if>
+                                    </where>
+    </sql>
+</mapper>

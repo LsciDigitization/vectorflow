@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.model.mapper.StorageModelMapper">
+
+
+
+
+	<select id="getNucStorage"  resultType="com.mega.hephaestus.pms.workflow.instancecontext.NucStorageModel">
+		select
+		    d.nuc_id as device_id,
+		    m.nest_group as nest_groupId,
+		    m.grip_orintation as grip_orientation ,
+		    m.nest as nest
+		from
+		    hephaestus_storage_model m
+		left join
+		    hephaestus_device d on (d.id = m.device_id)
+		<where>
+			and m.id = #{storageId}
+		</where>
+	</select>
+
+	<select id="getHephaestusStorage"  resultType="com.mega.hephaestus.pms.data.model.entity.HephaestusStorageModel">
+		SELECT
+			m.*,d.nuc_id,d.device_type
+		FROM
+			hephaestus_storage_model m
+		LEFT JOIN
+			hephaestus_device d ON (d.id = m.device_id)
+		<where>
+			and d.nuc_id = #{nucId}
+			and m.nest_group = #{nestGroupId}
+			and m.nest = #{nest}
+		</where>
+	</select>
+
+
+</mapper>

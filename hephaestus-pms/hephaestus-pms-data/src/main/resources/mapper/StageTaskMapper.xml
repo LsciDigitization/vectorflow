@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mega.hephaestus.pms.data.model.mapper.StageTaskMapper">
+
+    <resultMap type="com.mega.hephaestus.pms.data.model.entity.HephaestusStageTask" id="HephaestusStageTaskMap">
+        <result property="id" column="id" jdbcType="BIGINT"/>
+        <result property="stageId" column="stage_id" jdbcType="BIGINT"/>
+        <result property="deviceId" column="device_id" jdbcType="BIGINT"/>
+        <result property="deviceName" column="device_name" jdbcType="VARCHAR"/>
+        <result property="experimentId" column="experiment_id" jdbcType="BIGINT"/>
+        <result property="taskName" column="task_name" jdbcType="VARCHAR"/>
+        <result property="taskDescription" column="task_description" jdbcType="VARCHAR"/>
+        <result property="deviceType" column="device_type" jdbcType="VARCHAR"/>
+        <result property="taskCommand" column="task_command" jdbcType="VARCHAR"/>
+        <result property="taskParameter" column="task_parameter" jdbcType="VARCHAR"/>
+        <result property="lockStatus" column="lock_status" jdbcType="INTEGER"/>
+        <result property="taskTimeOut" column="task_time_out" jdbcType="BIGINT"/>
+        <result property="beforeHook" column="before_hook" jdbcType="VARCHAR"/>
+        <result property="afterSuccessHook" column="after_success_hook" jdbcType="VARCHAR"/>
+        <result property="afterFailHook" column="after_fail_hook" jdbcType="VARCHAR"/>
+        <result property="sortOrder" column="sort_order" jdbcType="INTEGER"/>
+        <result property="createBy" column="create_by" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateBy" column="update_by" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="remarks" column="remarks" jdbcType="VARCHAR"/>
+        <result property="onErrorTaskId" column="on_error_task_id" jdbcType="BIGINT"/>
+        <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+        <result property="deleteBy" column="delete_by" jdbcType="VARCHAR"/>
+        <result property="deleteTime" column="delete_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+
+    <select id="findStageTaskLeftDevice" resultMap="HephaestusStageTaskMap">
+        SELECT
+        a.*,
+        b.device_name device_name
+        FROM
+        hephaestus_stage_task a
+        LEFT JOIN hephaestus_device b on a.device_id = b.id
+        <where>
+            <if test="stageId != null and stageId != ''">
+                AND a.stage_id = #{stageId}
+            </if>
+
+        </where>
+    </select>
+
+
+</mapper>
