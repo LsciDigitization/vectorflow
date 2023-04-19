@@ -12,6 +12,7 @@
     <modules>
         <module>mega-component</module>
         <module>hephaestus-dependencies</module>
+        <module>hephaestus-pms</module>
     </modules>
 
     <properties>
@@ -34,6 +35,13 @@
             <dependency>
                 <groupId>com.mega.component</groupId>
                 <artifactId>mega-component-bom</artifactId>
+                <version>1.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-bom</artifactId>
                 <version>1.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
