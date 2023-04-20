@@ -15,6 +15,7 @@ import org.springframework.core.convert.support.GenericConversionService;
         DeviceManagerFactory.class,
         StageRedisService.class,
 })
+//@AutoConfigureOrder(0)
 @Configuration(proxyBeanMethods = true)
 public class NucAutoConfiguration {
 
