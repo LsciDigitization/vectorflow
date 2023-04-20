@@ -1,0 +1,25 @@
+com.mega.hephaestus.pms.workflow.device.deviceschedule.DeviceScheduleRegister=\
+  com.mega.hephaestus.pms.workflow.general.deviceschedule.DeviceTaskCentrifugeSchedule, \
+  com.mega.hephaestus.pms.workflow.general.deviceschedule.DeviceTaskIntelliXcapSchedule, \
+  com.mega.hephaestus.pms.workflow.general.deviceschedule.DeviceTaskLabwareHandlerSchedule, \
+  com.mega.hephaestus.pms.workflow.general.deviceschedule.DeviceTaskStarSchedule, \
+  com.mega.hephaestus.pms.workflow.general.deviceschedule.DeviceTaskGenericSchedule
+
+com.mega.hephaestus.pms.workflow.device.devicebottleneck.DeviceBottleneckRegister=\
+  com.mega.hephaestus.pms.workflow.general.devicebottleneck.WorkBottleneckCentrifugeDevice, \
+  com.mega.hephaestus.pms.workflow.general.devicebottleneck.WorkBottleneckIntelliXcapDevice, \
+  com.mega.hephaestus.pms.workflow.general.devicebottleneck.WorkBottleneckStarDevice
+
+com.mega.hephaestus.pms.workflow.work.workplate.WorkPlateRegister=\
+  com.mega.hephaestus.pms.workflow.general.workplate.WorkPlateEmptyConsumer, \
+  com.mega.hephaestus.pms.workflow.general.workplate.WorkPlateSampleConsumer, \
+  com.mega.hephaestus.pms.workflow.general.workplate.WorkPlateStandardConsumer, \
+  com.mega.hephaestus.pms.workflow.general.workplate.WorkPlatePipette1Consumer, \
+  com.mega.hephaestus.pms.workflow.general.workplate.WorkPlatePipette2Consumer
+
+com.mega.hephaestus.pms.workflow.work.workstart.WorkStartRegister=\
+  com.mega.hephaestus.pms.workflow.general.workstart.WorkStartStandardPlate, \
+  com.mega.hephaestus.pms.workflow.general.workstart.WorkStartSamplePlate, \
+  com.mega.hephaestus.pms.workflow.general.workstart.WorkStartEmptyPlate, \
+  com.mega.hephaestus.pms.workflow.general.workstart.WorkStartPipette1Plate, \
+  com.mega.hephaestus.pms.workflow.general.workstart.WorkStartPipette2Plate

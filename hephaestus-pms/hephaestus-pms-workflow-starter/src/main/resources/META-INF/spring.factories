@@ -1,0 +1,38 @@
+com.mega.hephaestus.pms.workflow.device.devicebus.BusDaemonRegister=\
+  com.mega.hephaestus.pms.workflow.config.register.DeviceBusRegister, \
+  com.mega.hephaestus.pms.workflow.config.register.WorkBusRegister
+
+com.mega.hephaestus.pms.workflow.task.tasktype.TaskTypeRegister=\
+  com.mega.hephaestus.pms.workflow.task.tasktype.StartTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.EndTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.DynamicTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.StageTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.GatewayTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.AwaitTaskType, \
+  com.mega.hephaestus.pms.workflow.task.tasktype.ConditionTaskType
+
+com.mega.hephaestus.pms.workflow.device.devicedaemon.DeviceDaemonRegister=\
+  com.mega.hephaestus.pms.workflow.daemon.centrifuge.CentrifugeDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.incubator.Incubator4dDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.incubator.Incubator28dDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.incubator.Incubator37dDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.incubator.IncubatorDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.xcap.IntelliXcapDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.labelprinter.LabelPrinterDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.labwarehandler.LabwareHandler4zDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.labwarehandler.LabwareHandler6zDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.lpx.LPX440Daemon, \
+  com.mega.hephaestus.pms.workflow.daemon.multidrop.MultidropDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.none.NoneDeviceDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.pcr.PCRDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.roverstation.RoverStation1Daemon, \
+  com.mega.hephaestus.pms.workflow.daemon.roverstation.RoverStation2Daemon, \
+  com.mega.hephaestus.pms.workflow.daemon.scanner.ScannerDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.shakepool.ShakePoolDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.spea.SPEA200Daemon, \
+  com.mega.hephaestus.pms.workflow.daemon.stx.STX220Daemon, \
+  com.mega.hephaestus.pms.workflow.daemon.viafill.ViaFillDaemon, \
+  com.mega.hephaestus.pms.workflow.daemon.xpeel.XPeelDaemon
+
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#  com.mega.hephaestus.pms.workflow.config.WorkflowAutoConfiguration
