@@ -18,6 +18,9 @@
         <module>hephaestus-pms-nuc-starter</module>
         <module>hephaestus-pms-data</module>
         <module>hephaestus-pms-data-runtime</module>
+        <module>hephaestus-pms-workflow</module>
+        <module>hephaestus-pms-workflow-general</module>
+        <module>hephaestus-pms-workflow-starter</module>
     </modules>
 
     <properties>

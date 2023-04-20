@@ -35,6 +35,16 @@
                 <artifactId>hephaestus-pms-data-runtime</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-workflow</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-workflow-general</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
