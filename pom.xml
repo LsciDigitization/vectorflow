@@ -13,6 +13,7 @@
         <module>mega-component</module>
         <module>hephaestus-dependencies</module>
         <module>hephaestus-pms</module>
+        <module>mega-application</module>
     </modules>
 
     <properties>
