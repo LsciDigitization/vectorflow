@@ -34,6 +34,7 @@
         <module>mega-component-nuc</module>
         <module>mega-component-bioflow</module>
         <module>mega-component-commons</module>
+        <module>mega-component-utils</module>
     </modules>
 
     <properties>
