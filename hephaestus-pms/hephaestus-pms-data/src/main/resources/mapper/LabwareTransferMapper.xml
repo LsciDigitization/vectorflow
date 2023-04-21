@@ -53,12 +53,12 @@
             <if test="processRecordId != null">
                 and (process_record_id = #{processRecordId} )
             </if>
-            <if test="sampleId != null and sampleId>0">
-            and   (   source_sample_id = #{sampleId}  or destination_sample_id = #{sampleId}
 
+            <if test="sampleId != null and sampleId>0 and wellId !=null">
+            and   (   source_sample_id = #{sampleId}  or destination_sample_id = #{sampleId}   or destination_well = #{wellId} )
             </if>
-            <if test="wellId != null">
-                or destination_well = #{wellId} )
+            <if test=" sampleId== -1 and wellId !=null">
+                and   (   destination_well = #{wellId} )
             </if>
 
 

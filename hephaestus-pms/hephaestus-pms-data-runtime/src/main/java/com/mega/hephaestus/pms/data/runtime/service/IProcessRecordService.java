@@ -13,17 +13,7 @@ import java.util.Optional;
  */
 public interface IProcessRecordService extends IService<ProcessRecordEntity> {
 
-    /**
-     * 获取正在运行的实验组历史
-     * @return
-     */
-    Optional<ProcessRecordEntity> getRunningGroup();
 
-    /**
-     * 获取最后一个完成的
-     * @return
-     */
-    Optional<ProcessRecordEntity> getLastFinishedGroup();
 
     /**
      * 获取最后一次 如果有运行的返回运行的 没有运行的返回 最后一个完成的
@@ -31,5 +21,6 @@ public interface IProcessRecordService extends IService<ProcessRecordEntity> {
      */
     Optional<ProcessRecordEntity> getLast();
 
+    Optional<ProcessRecordEntity> getLastByName(String applicationName);
 }
 

@@ -37,7 +37,6 @@ public class DeviceServiceImpl extends
     }
 
 
-
     @Override
     public List<DeviceEntity> getDevices() {
         List<DeviceEntity> list = lambdaQuery()
@@ -66,9 +65,9 @@ public class DeviceServiceImpl extends
      */
     @Override
     public List<DeviceEntity> listByDeviceKeys(List<String> deviceKeys) {
-         List<DeviceEntity> list = lambdaQuery().in(DeviceEntity::getDeviceKey, deviceKeys)
+        List<DeviceEntity> list = lambdaQuery().in(DeviceEntity::getDeviceKey, deviceKeys)
                 .list();
-        if(CollectionUtils.isEmpty(list)){
+        if (CollectionUtils.isEmpty(list)) {
             return List.of();
         }
         return list;
@@ -99,7 +98,7 @@ public class DeviceServiceImpl extends
     @Override
     public Optional<DeviceEntity> getByDeviceKey(String deviceKey) {
         List<DeviceEntity> list = lambdaQuery()
-                .eq(DeviceEntity::getDeviceKey,deviceKey)
+                .eq(DeviceEntity::getDeviceKey, deviceKey)
                 .eq(DeviceEntity::getIsDeleted, BooleanEnum.NO)
                 .list();
 

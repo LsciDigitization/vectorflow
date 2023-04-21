@@ -35,11 +35,16 @@ public class LabwarePlateEntity {
 
 
     /**
-     * 托架id
+     * 托架id(旧)
+     *
      */
     private Long labwareNestId;
 
 
+    /**
+     * 托架id(新)
+     */
+    private Long deviceNestId;
     /**
      *  起始位置
      */
