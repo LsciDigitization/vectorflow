@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mega.vectorflow</groupId>
+        <artifactId>hephaestus-pms</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>hephaestus-pms-agent-starter</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+        </dependency>
+
+        <!-- agent统一加载依赖 -->
+        <dependency>
+            <groupId>com.mega.vectorflow</groupId>
+            <artifactId>hephaestus-pms-agent-dashboard</artifactId>
+        </dependency>
+
+        <!-- starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+        <!-- Druid -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- Dynamic DataSource -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mega.vectorflow</groupId>
+            <artifactId>hephaestus-pms-workflow-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.vectorflow</groupId>
+            <artifactId>hephaestus-pms-nuc-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.component</groupId>
+            <artifactId>mega-component-json-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.component</groupId>
+            <artifactId>mega-component-mybatis-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.component</groupId>
+            <artifactId>mega-component-openfeign-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.component</groupId>
+            <artifactId>mega-component-swagger-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mega.component</groupId>
+            <artifactId>mega-component-threadpool-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
