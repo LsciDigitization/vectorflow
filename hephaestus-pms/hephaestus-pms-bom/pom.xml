@@ -45,6 +45,11 @@
                 <artifactId>hephaestus-pms-workflow-general</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mega.vectorflow</groupId>
+                <artifactId>hephaestus-pms-agent-dashboard</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
