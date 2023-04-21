@@ -62,6 +62,7 @@
         <oshi.version>6.2.2</oshi.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <picocli.version>0.2.0</picocli.version>
+        <knife4j-annotations.version>3.0.3</knife4j-annotations.version>
     </properties>
 
     <dependencyManagement>
@@ -312,6 +313,11 @@
                 <groupId>com.kakawait</groupId>
                 <artifactId>picocli-spring-boot-starter</artifactId>
                 <version>${picocli.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-annotations</artifactId>
+                <version>${knife4j-annotations.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
