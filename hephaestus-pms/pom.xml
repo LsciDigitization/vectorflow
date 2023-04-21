@@ -22,6 +22,7 @@
         <module>hephaestus-pms-workflow-general</module>
         <module>hephaestus-pms-workflow-starter</module>
         <module>hephaestus-pms-agent-dashboard</module>
+        <module>hephaestus-pms-agent-starter</module>
     </modules>
 
     <properties>
