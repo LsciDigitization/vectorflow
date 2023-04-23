@@ -12,6 +12,10 @@
     <artifactId>mega-application</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>agent-general</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
