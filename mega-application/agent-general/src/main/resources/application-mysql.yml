@@ -1,0 +1,18 @@
+spring:
+  sql:
+    init:
+      platform: mysql
+      # 初始化数据表 DDL
+      schema-locations:
+        - classpath:db/schema-runtime-mysql.sql
+      mode: ALWAYS
+      continue-on-error: true
+  datasource:
+    dynamic:
+      datasource:
+        # 运行时数据源
+        runtime:
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.15.30:3306/vectorflow_runtime?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&useSSL=true&tinyInt1isBit=false
+          username: demo
+          password: demo

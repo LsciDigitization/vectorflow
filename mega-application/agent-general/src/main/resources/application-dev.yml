@@ -1,0 +1,11 @@
+# 数据源配置
+spring:
+  datasource:
+    dynamic:
+      datasource:
+        # 主数据源
+        master:
+          driverClassName: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.15.30:3306/vectorflow?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&useSSL=true&tinyInt1isBit=false
+          username: demo
+          password: demo

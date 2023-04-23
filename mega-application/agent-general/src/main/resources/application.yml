@@ -1,0 +1,96 @@
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为8080
+  port: 9080
+  servlet:
+    # 应用的访问路径
+    context-path: /
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # 连接数满后的排队数，默认为100
+    accept-count: 1000
+    threads:
+      # tomcat最大线程数，默认为200
+      max: 800
+      # Tomcat启动初始化的线程数，默认值10
+      min-spare: 100
+
+
+# Spring配置
+spring:
+  profiles:
+    # mysql,dev; h2,dev
+    active: mysql,dev
+  application:
+    name: hephaestus
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 10MB
+      # 设置总上传的文件大小
+      max-request-size: 20MB
+  config:
+    import:
+      # 可以导入配置文件
+      - datasource-druid.yml
+      - hephaestus-agent.yml
+      - hephaestus-device.yml
+      - swagger.yml
+  jackson:
+    time-zone: Asia/Shanghai
+
+
+# actuator setting
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - threadpool
+          - device
+
+# 日志配置
+logging:
+  level:
+    org.springframework: info
+    com.mega.component: info
+    com.mega.hephaestus.pms: info
+    com.mega.hephaestus.pms.control.model.mapper: info
+
+
+# MyBatis配置
+mybatis-plus:
+  # 搜索指定包别名
+  typeAliasesPackage: com.mega.**.domain,com.mega.component.common.**.entity,com.mega.hephaestus.control.**.entity
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mapper/**/*Mapper.xml,classpath*:com/mega/**/mapper/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
+  globalConfig:
+    # 是否打印 Logo banner
+    banner: false
+    dbConfig:
+      # 主键类型
+      # AUTO 自增 NONE 空 INPUT 用户输入 ASSIGN_ID 雪花 ASSIGN_UUID 唯一 UUID
+      idType: ASSIGN_ID
+      # 逻辑已删除值
+      logicDeleteValue: 2
+      # 逻辑未删除值
+      logicNotDeleteValue: 0
+      insertStrategy: NOT_NULL
+      updateStrategy: NOT_NULL
+      where-strategy: NOT_NULL
+
+# PageHelper分页插件
+pagehelper:
+  helperDialect: mysql
+  supportMethodsArguments: true
+  params: count=countSql
+

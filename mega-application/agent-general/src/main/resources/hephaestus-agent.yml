@@ -1,0 +1,21 @@
+hephaestus:
+  work:
+    # 是否启用工作线程
+    enabled: true
+    # 任务耗时比率，测试时使用，10 就是10/100, 十分之一
+    task-time-rate: 1
+  nuc:
+    debug: true
+    # 设备配置注册：file, database
+    registry-type: database
+    # 当使用database时，是否使用设备代理地址
+    use-proxy: true
+  project:
+    # dmpk, viablife
+    code: dmpk
+    process-id: 1570357154636447747
+  agent:
+    project:
+      code: dmpk
+      experiment-group-id: 1570357154636447747
+      auto-start: true

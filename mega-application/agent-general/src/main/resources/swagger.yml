@@ -1,0 +1,37 @@
+# swagger配置
+swagger:
+  # 是否开启swagger
+  enabled: true
+  base-package: 'com.mega.hephaestus.agent'
+  # 标题
+  title: 'Vector Flow Agent'
+  # 描述
+  description: '实验室自动化系统接口文档'
+  # 版本
+  version: '1.0.0'
+  # 作者信息
+  contact:
+    name: Zhengdong Wang
+    email: hxroyal@gmail.com
+  default-group-name: Agent Dashboard
+
+knife4j:
+  enable: true
+  # 是否开启生产环境保护策略
+  production: false
+  # 登录认证
+  basic:
+    enable: false
+    username: mega
+    password: 123456
+  # 前端Ui的个性化配置属性
+  setting:
+    # 默认语言
+    language: zh-CN
+    # 是否显示Footer
+    enableFooter: false
+    # 是否开启动态参数调试功能
+    enableDynamicParameter: false
+    # 是否在每个Debug调试栏后显示刷新变量按钮
+    enableReloadCacheParameter: false
+
