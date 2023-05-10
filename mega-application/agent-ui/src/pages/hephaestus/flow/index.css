@@ -1,0 +1,73 @@
+@media print {
+  .no-print{ display: none; }
+  .ant-layout-header{ display: none; }
+}
+
+.providerflow {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  height: 1200px;
+}
+
+.providerflow aside {
+  border-left: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.providerflow aside .description {
+  margin-bottom: 10px;
+}
+
+.providerflow aside .title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.providerflow aside .transform {
+  margin-bottom: 20px;
+}
+
+.providerflow .reactflow-wrapper {
+  flex-grow: 1;
+}
+
+.providerflow .selectall {
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .providerflow {
+    flex-direction: row;
+  }
+
+  .providerflow aside {
+    width: 20%;
+    max-width: 250px;
+    height: 200px;
+  }
+}
+
+.transition {
+  flex-grow: 1;
+  position: relative;
+}
+
+.transition .controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  font-size: 12px;
+}
+
+.transition .controls button + button {
+  margin-left: 10px;
+}
+/*去掉水印*/
+.react-flow__attribution a{
+
+    display: none !important;
+}

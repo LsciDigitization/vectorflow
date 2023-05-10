@@ -1,0 +1,24 @@
+export type DeviceTask = {
+  deviceType: string;
+  taskErrorMessage: any;
+  taskDuration: any;
+  taskCommand: string;
+  deviceKey: string;
+  taskParameter: any;
+  deviceId: any;
+  taskRequestId: string;
+  taskResponseMessage: any;
+  taskTimeoutSecond: number;
+  instanceId: number;
+  stageName: any;
+  createTime: string;
+  experimentGroupHistoryId: any;
+  taskName: string;
+  startTime: string;
+  experimentId: any;
+  id: number;
+  endTime: any;
+  taskId: number;
+  taskStatus: string;
+  stageId: any;
+};

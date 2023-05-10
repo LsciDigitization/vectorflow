@@ -1,0 +1,10 @@
+@media print {
+  .no-print{ display: none; }
+  .ant-layout-header{ display: none; }
+}
+
+
+.instanceDynamic .ant-card .ant-card-body{
+  padding: 0 !important;
+  margin-top: 35px;
+}

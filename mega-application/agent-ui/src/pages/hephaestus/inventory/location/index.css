@@ -1,0 +1,12 @@
+
+
+.myCss > .ant-table  {
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 800px;
+}
+
+.myCss  {
+  height: 100% !important;;
+  min-width: 120px;
+}

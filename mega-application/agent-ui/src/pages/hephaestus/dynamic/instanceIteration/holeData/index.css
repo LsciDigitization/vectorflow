@@ -1,0 +1,28 @@
+
+.hole-data{
+  cursor:pointer;
+
+}
+
+
+/*.ant-table-tbody > tr.ant-table-row:hover {*/
+/*  background: none !important;*/
+/*}*/
+
+.hole-data:hover{
+  background: rgba(11,253,255,0.2);
+}
+
+.td-min-width-normal{
+  min-width: 60px;
+}
+
+.td-min-width-large{
+  min-width: 120px;
+}
+
+/*超大*/
+
+.td-min-width-extra-large{
+  min-width: 180px;
+}
